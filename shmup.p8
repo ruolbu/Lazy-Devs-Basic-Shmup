@@ -5,40 +5,97 @@ __lua__
 function _init()
 	--clear screen
 	cls(0)
-	harry=40
-	speed=3
+	xpos=40
+	ypos=64
+	xspeed=3
+ yspeed=2
 end
 
 function _update()
 	
-	speed=0
-	--controls
-	if btn(0) then
-		speed=-3
-	end
-	
-	if btn(1) then
-		speed=3
+	if btn(🅾️) then
+		dvd()		
+	else
+	 normal()
 	end
 
-	--moving the ship
-	harry=harry+speed
-	
-	--checking if we hit the edge
-	if harry>120 then
-		harry=120
-	end
-	if harry<0 then
-		harry=0
-	end
 
 end
 
 function _draw()
 	cls(0)
-	spr(3,harry,64)
+	spr(3,xpos,ypos)
 end
 
+function normal()
+		xspeed=0
+	yspeed=0
+	--controls
+	if btn(0) then
+		xspeed=-3
+	end
+	
+	if btn(1) then
+		xspeed=3
+	end
+	
+	if btn(2) then
+		yspeed=-3
+	end
+	
+	if btn(3) then
+		yspeed=3
+	end
+
+	--moving the ship
+	xpos=xpos+xspeed
+	ypos=ypos+yspeed
+	
+	--checking if we hit the edge
+	if xpos>128 then
+		xpos=-8
+	end
+	if xpos<-8 then
+		xpos=128
+	end
+	
+	if ypos>128 then
+		ypos=-8
+	end
+	if ypos<-8 then
+		ypos=128
+	end
+end
+
+
+
+function dvd()
+	 if xspeed==0 then
+	 	xspeed=3
+  end
+  if yspeed==0 then
+	 	yspeed=2
+  end
+
+	--moving the ship
+	xpos=xpos+xspeed
+	ypos=ypos+yspeed
+	
+	--checking if we hit the edge
+	if xpos>120 then
+		xspeed=xspeed*-1
+	end
+	if xpos<0 then
+		xspeed=xspeed*-1
+	end
+	
+	if ypos>120 then
+		yspeed=yspeed*-1
+	end
+	if ypos<0 then
+		yspeed=yspeed*-1
+	end
+end
 __gfx__
 00000000000080000000280000028000002800000002000000000000000000000000000000000000606000000000000000000000000000000000000000000000
 000000000000800000008800000280000028000000020000000cc0000066660000066000000000000c0000000006000000000000000000000000006666600000
