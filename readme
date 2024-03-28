@@ -44,3 +44,20 @@ mynumber=40
 mynumber=mynumber+1
 circ(64,64,myvar)                      circle that changes size
 spr(3,myvar,64)                        sprite that moves to the side
+
+
+
+##########
+### 03 ###
+##########
+
+if you change color then it stays like that for later draws
+first _update is called and then _draw is called
+if variable<value then
+ indented text
+end
+variable<value
+variable>value
+variable==value
+btn(0) is true when left is pressed
+btn(1) is true when right is pressed
