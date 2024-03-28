@@ -61,3 +61,17 @@ variable>value
 variable==value
 btn(0) is true when left is pressed
 btn(1) is true when right is pressed
+
+
+
+##########
+### 04 ###
+##########
+
+proper variable naming
+shipx shipy shipsx shipsy
+separate variables for separate entity bullet
+bullx bully
+btnp() is true only when pressing down
+sfx(0) plays sound effect number 00
+sound 04 loop 13-18 code to get there from 13-50?
