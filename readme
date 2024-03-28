@@ -1,6 +1,7 @@
 ############
 ###  01  ###
 ############
+
 print("text", X, Y, COL)               print("Hello World", 50, 100, 15)
 escp + run 
 strg + r
@@ -17,3 +18,29 @@ save <filename>                        save
 reboot
 load <filename>
 dir                                    ls
+
+
+
+##########
+### 02 ###
+##########
+
+-- write comment
+function _init()                       once at startup
+ indented text
+ content of the function
+end                                    end of the function
+
+function _draw()                       mostly 30fps but it can lack
+end
+
+function _update()                     exactly 30fps
+end
+
+shift + enter                          automatically create end
+ctrl + s                               save
+variable=value
+mynumber=40
+mynumber=mynumber+1
+circ(64,64,myvar)                      circle that changes size
+spr(3,myvar,64)                        sprite that moves to the side

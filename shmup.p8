@@ -1,5 +1,31 @@
 pico-8 cartridge // http://www.pico-8.com
 version 41
+__lua__
+-- init called once at startup
+function _init()
+	--clear screen
+	cls(0)
+	
+	harry=40
+	mimi=100
+end
+
+-- drawn called when new frame
+-- gets drawn at 30 fps
+function _draw()
+	cls(0)
+	print(harry,mimi,harry)
+	circ(64,64,mimi)
+		circ(64,64,harry)
+	spr(3,harry,64)
+end
+
+-- update is for gameplay logic
+-- and math at hard 30 fps
+function _update()
+	harry=harry+1
+	mimi=mimi-1
+end
 __gfx__
 00000000000080000000280000028000002800000002000000000000000000000000000000000000606000000000000000000000000000000000000000000000
 000000000000800000008800000280000028000000020000000cc0000066660000066000000000000c0000000006000000000000000000000000006666600000
